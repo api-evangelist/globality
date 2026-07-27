@@ -1,0 +1,20 @@
+generated: '2026-07-19'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.globality.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep 20 04:44:28 2026 GMT
+  hsts: false
+domains:
+- domain: globality.com
+  dnssec: false
+  caa:
+  - 0 issue "digicert.com"
+  - 0 issue "letsencrypt.org"
+  - 0 iodef "mailto:certs@globality.com"
+  - 0 issue "amazon.com"
+  spf: true
+  dmarc: true
+  dmarc_policy: reject

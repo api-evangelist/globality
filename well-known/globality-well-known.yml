@@ -1,0 +1,25 @@
+generated: '2026-07-19'
+method: searched
+source: live /.well-known/ probes of Globality hosts
+note: >-
+  No genuine well-known discovery documents were found. www.globality.com
+  returns 404 for all probed paths. The auth host auth.prod.globality.com
+  returns HTTP 200 for every /.well-known/ path but the body is the login
+  single-page-app HTML (Content-Type text/html, "Globality, Inc." title) — a
+  catch-all, not a real RFC 9116 security.txt, OIDC, RFC 8414, api-catalog, or
+  ai-plugin document. Recorded as absent; no WellKnown/SecurityTxt pointer wired.
+hosts:
+- host: https://www.globality.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+- host: https://auth.prod.globality.com
+  documents:
+  - {path: /.well-known/security.txt, status: 200, real: false, content_type: text/html}
+  - {path: /.well-known/openid-configuration, status: 200, real: false, content_type: text/html}
+  - {path: /.well-known/oauth-authorization-server, status: 200, real: false, content_type: text/html}
+  - {path: /.well-known/api-catalog, status: 200, real: false, content_type: text/html}
+  - {path: /.well-known/ai-plugin.json, status: 200, real: false, content_type: text/html}

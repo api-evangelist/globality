@@ -1,8 +1,24 @@
 aid: globality
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/globality.png
 name: Globality
-description: 'Globality is a company surfaced as a portfolio company of softbank-vision-fund and added
-  to the API Evangelist network as a stub for enrichment. Sector: enterprise. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: 'Globality is an AI-driven enterprise sourcing and procurement platform that helps large
+  organizations run sourcing events, manage tail spend, and reduce costs through automated, guided
+  workflows and an AI advisor. The platform integrates with enterprise systems such as SAP Ariba,
+  SAP Fieldglass, and Coupa via prebuilt connectors, and exposes a developer API and webhooks so
+  customers can sync sourcing, contract, and spend data into their own systems and middleware.
+  Backed by the SoftBank Vision Fund, Globality serves global enterprises across sectors and holds
+  ISO/IEC 27001:2022 certification along with SOC 2 and GDPR compliance.'
 url: https://raw.githubusercontent.com/api-evangelist/globality/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,13 +28,56 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Enterprise
+- Procurement
+- Sourcing
+- Spend Management
+- Artificial Intelligence
+- Webhooks
 apis: []
+common:
+- type: DomainSecurity
+  url: security/globality-domain-security.yml
+- type: Website
+  url: https://www.globality.com
+- type: DeveloperPortal
+  url: https://www.globality.com/products/integrations/developer-api
+- type: Documentation
+  url: https://www.globality.com/products/integrations/globality-webhooks/
+- type: Integrations
+  url: https://www.globality.com/products/integrations/
+- type: Webhooks
+  url: https://www.globality.com/products/integrations/globality-webhooks/
+- type: Blog
+  url: https://www.globality.com/resources/innovation-blog/
+- type: Support
+  url: https://www.globality.com/security-trust/contact/
+- type: Login
+  url: https://auth.prod.globality.com/
+- type: TermsOfService
+  url: https://www.globality.com/terms-of-use/
+- type: PrivacyPolicy
+  url: https://www.globality.com/privacy-policy/
+- type: TrustCenter
+  url: security/globality-trust-center.yml
+- type: Compliance
+  url: https://www.globality.com/security-trust/
+- type: Security
+  url: https://www.globality.com/security-trust/
+- type: VulnerabilityDisclosure
+  url: security/globality-vulnerability-disclosure.yml
+- type: LLMsTxt
+  url: llms/globality-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
